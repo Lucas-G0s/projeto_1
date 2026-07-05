@@ -5,9 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 # Usuários
 from .models import Usuario
 from .forms import UsuarioFormCadastro
-from django.contrib.auth.decorators import login_required
 
-@login_required
 def dashboard(request):
     return render(request, 'dashboard.html')
 
