@@ -22,7 +22,7 @@ def cadastro(request):
     return render(request, 'cadastro.html')
 
 def curso_detalhes(request):
-    return render(request, 'curso_detalhe.html')
+    return render(request, 'curso_detalhes.html')
 
 def cursos(request):
     return render(request, 'cursos.html')
