@@ -1,0 +1,136 @@
+/* ── Full-page layout (sem header/footer do site) ── */
+.db-layout  { display: flex; min-height: 100vh; }
+
+/* ── Sidebar ── */
+.db-sidebar {
+  width: 220px; flex-shrink: 0;
+  background: var(--ink);
+  color: #fff;
+  display: flex; flex-direction: column;
+}
+
+.db-sidebar-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 16px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.db-sidebar-header .brand { color: #fff; font-weight: 700; font-size: 1rem; }
+.db-close { display: none; background: none; border: none; color: rgba(255,255,255,.7); font-size: 1.3rem; cursor: pointer; line-height: 1; }
+
+.db-nav     { display: flex; flex-direction: column; padding: 12px 0; flex: 1; }
+.db-nav a   { padding: 12px 20px; color: rgba(255,255,255,.7); font-size: .9rem; }
+.db-nav a:hover, .db-nav a.active { background: rgba(255,255,255,.1); color: #fff; }
+.db-nav .db-sair { border-top: 1px solid rgba(255,255,255,.1); margin-top: auto; color: #f87171; }
+
+/* ── Overlay (mobile) ── */
+.db-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 199; }
+.db-overlay.is-open { display: block; }
+
+/* ── Right side ── */
+.db-content { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+
+/* ── Topbar ── */
+.db-topbar {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--surface); border-bottom: 1px solid #d0dae8;
+  padding: 0 24px; height: 60px;
+  position: sticky; top: 0; z-index: 10;
+}
+
+.db-topbar h1  { font-size: 1.1rem; }
+.db-hamburger  { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--ink); }
+
+/* ── Main content ── */
+.db-main { padding: 28px 24px; display: flex; flex-direction: column; gap: 28px; }
+
+/* ── Stats cards ── */
+.db-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+.db-stat {
+  background: var(--surface); border-radius: var(--radius);
+  padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+.db-stat strong { display: block; font-size: 2rem; font-weight: 700; color: var(--blue-500); line-height: 1; }
+.db-stat span   { font-size: .85rem; color: var(--ink-soft); }
+
+/* ── Generic section card ── */
+.db-section {
+  background: var(--surface); border-radius: var(--radius);
+  padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+.db-section h2 { font-size: 1rem; font-weight: 700; margin-bottom: 16px; }
+
+/* ── Table ── */
+.db-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.db-table th { text-align: left; padding: 10px 12px; background: var(--bg); color: var(--ink-soft); font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; }
+.db-table td { padding: 12px; border-bottom: 1px solid #e8eef6; vertical-align: middle; }
+.db-table tr:last-child td { border-bottom: none; }
+
+.db-thumb { width: 52px; height: 38px; background: var(--blue-50); border-radius: 4px; border-left: 3px solid var(--blue-500); }
+
+.db-actions { display: flex; gap: 6px; }
+.db-btn { padding: 5px 10px; border-radius: 5px; font-size: .8rem; font-weight: 600; border: none; cursor: pointer; }
+.db-btn-edit   { background: var(--blue-50); color: var(--blue-700); }
+.db-btn-del    { background: #fff0f0; color: #b91c1c; }
+.db-btn-toggle { background: #f0fdf4; color: #15803d; }
+
+/* ── Pagination (reusa o padrão de cursos.css) ── */
+.pagination { display: flex; gap: 6px; margin-top: 20px; }
+.pagination a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 6px; font-size: .85rem; font-weight: 600;
+  color: var(--ink-soft); background: var(--bg); border: 1px solid #d0dae8;
+}
+.pagination a:hover, .pagination a.active { background: var(--blue-700); color: #fff; border-color: var(--blue-700); }
+
+/* ── Form template ── */
+.db-form-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 20px; }
+.db-col-2 { grid-column: span 2; }
+.db-col-3 { grid-column: span 3; }
+
+.db-form-group { margin-bottom: 16px; }
+.db-form-group label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 6px; }
+
+.db-form-group input[type="text"],
+.db-form-group input[type="email"],
+.db-form-group input[type="password"],
+.db-form-group input[type="number"],
+.db-form-group input[type="date"],
+.db-form-group input[type="time"],
+.db-form-group input[type="color"],
+.db-form-group select,
+.db-form-group textarea {
+  width: 100%; padding: 10px 12px;
+  border: 1px solid #d0dae8; border-radius: 6px;
+  font-size: .9rem; color: var(--ink); background: var(--bg); outline: none;
+}
+.db-form-group input:focus,
+.db-form-group select:focus,
+.db-form-group textarea:focus { border-color: var(--blue-500); }
+
+.db-form-group textarea     { resize: vertical; min-height: 90px; }
+.db-form-group input[type="color"]  { padding: 4px; height: 40px; cursor: pointer; }
+.db-form-group input[type="range"]  { width: 100%; accent-color: var(--blue-500); margin-top: 4px; }
+
+.db-inline { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 4px; }
+.db-inline label { display: flex; align-items: center; gap: 6px; font-weight: 400; cursor: pointer; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .db-sidebar {
+    position: fixed; left: 0; top: 0; height: 100%; z-index: 200;
+    transform: translateX(-100%); transition: transform .25s;
+  }
+  .db-sidebar.is-open { transform: translateX(0); }
+  .db-close     { display: block; }
+  .db-hamburger { display: block; }
+
+  .db-stats     { grid-template-columns: repeat(2, 1fr); }
+  .db-form-grid { grid-template-columns: 1fr; }
+  .db-col-2, .db-col-3 { grid-column: span 1; }
+
+  /* esconde coluna Tipo na tabela em mobile */
+  .db-table th:nth-child(3),
+  .db-table td:nth-child(3) { display: none; }
+}
