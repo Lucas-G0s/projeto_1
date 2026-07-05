@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+Cursos
+{% endblock %}
+
+{% block estilo %}
+<link rel="stylesheet" href="{% static 'assets/css/cursos.css' %}">
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'assets/js/script.js' %}"></script>
+{% endblock %}
+
+{% block conteudo %}
+      <div>
+        <div class="courses-grid">
+
+          <div class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <span class="badge">Informática</span>
+              <h3>Introdução à Programação</h3>
+              <p>Fundamentos da lógica de programação com Python.</p>
+              <a href="curso_detalhes.html" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <span class="badge">Informática</span>
+              <h3>Planilhas Eletrônicas</h3>
+              <p>Excel e LibreOffice Calc para uso no dia a dia.</p>
+              <a href="curso_detalhes.html" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <span class="badge">Informática</span>
+              <h3>Redes de Computadores</h3>
+              <p>Conceitos básicos de redes locais e internet.</p>
+              <a href="curso_detalhes.html" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <span class="badge">Eletromecânica</span>
+              <h3>Elétrica Residencial</h3>
+              <p>Instalações elétricas residenciais com segurança.</p>
+              <a href="curso_detalhes.html" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <span class="badge">Eletromecânica</span>
+              <h3>Automação Industrial</h3>
+              <p>Introdução aos sistemas automatizados e CLPs.</p>
+              <a href="curso_detalhes.html" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <span class="badge">Eletromecânica</span>
+              <h3>Soldagem Básica</h3>
+              <p>Técnicas de soldagem MIG/MAG para iniciantes.</p>
+              <a href="curso_detalhes.html" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <span class="badge">Eventos</span>
+              <h3>Organização de Eventos</h3>
+              <p>Planejamento e execução de eventos corporativos.</p>
+              <a href="curso_detalhes.html" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <span class="badge">Eventos</span>
+              <h3>Cerimonial e Protocolo</h3>
+              <p>Normas de etiqueta e condução de cerimônias.</p>
+              <a href="curso_detalhes.html" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img"></div>
+            <div class="card-body">
+              <span class="badge">Eventos</span>
+              <h3>Fotografia para Eventos</h3>
+              <p>Técnicas fotográficas aplicadas a eventos sociais.</p>
+              <a href="curso_detalhes.html" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+          </div>
+
+        </div>
+
+        <nav class="pagination" aria-label="Paginação">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+        </nav>
+      </div>
+{% endblock %}
