@@ -2,7 +2,7 @@
     <div class="container header-inner">
       <a href="index.html" class="brand">Cursos FICs</a>
       <nav class="nav">
-        <a href="index.html">Início</a>
+        <a href="{% url 'index' %}">Início</a>
         <a href="cursos.html">Cursos</a>
         <a href="#contato">Contato</a>
       </nav>
@@ -15,10 +15,10 @@
       </button>
     </div>
     <nav class="mobile-nav">
-      <a href="index.html">Início</a>
-      <a href="cursos.html">Cursos</a>
-      <a href="contato">Contato</a>
-      <a href="login.html">Login</a>
-      <a href="cadastro.html">Cadastro</a>
+      <a href="{% url 'index' %}">Início</a>
+      <a href="{% url 'cursos' %}">Cursos</a>
+      <a href="{% url 'contato' %}">Contato</a>
+      <a href="{% url 'login' %}">Login</a>
+      <a href="{% url 'cadastro' %}">Cadastro</a>
     </nav>
   </header>
